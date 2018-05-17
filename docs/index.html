@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Selecto vanilla Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/cayman.css" rel="stylesheet"> 
+        <link href="css/selecto.css" rel="stylesheet"> 
+    </head>
+    <body>
+        <section class="page-header">
+      <h1 class="project-name">Selecto Dropdown</h1>
+      <h2 class="project-tagline">Replaces original select tag with selecto dropdown</h2>
+      <a href="https://github.com/westag/selecto" class="btn">View on GitHub</a>
+      <a href="https://github.com/westag/selecto/archive/master.zip" class="btn">Download .zip</a>
+    </section>
+        <section class="main-content">
+            <h1>Demo Page</h1>
+            <h3>Basic dropdown</h3>
+            <pre>
+                <code>
+var dropdown = new Selecto('#colors');
+                </code>
+            </pre>
+            <select id="colors" name="colors">
+                <option value="">Choose color</option>
+                <option value="purple">Purple</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <h3>Dropdown with custom width and height</h3>
+<pre>
+                <code>
+var dropdown = new Selecto('#music', {
+width:500
+height: 60,
+});
+                </code>
+            </pre>
+            <select id="music" name="music">
+                <option value=" ">Choose music genre</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="rock">Rock</option>
+                <option value="latin">Latin</option>
+            </select>
+            <h3>Dropdown with images</h3>
+         <pre>
+                <code>
+// dropdown with images
+ var dropdown3 = new Selecto('.countries', {
+    width: 250,
+    height: '40',
+    renderFunction: myRender,
+    renderSelect: mySelect
+});
+
+// add images to items
+function myRender(country) {
+    var template, cssClass;
+
+    cssClass = country.getAttribute('data-class');
+    template = cssClass ? '&lt;span class=&quot;color ' + cssClass + '&quot;&gt;&lt;/span&gt;' + country.textContent : country.textContent;
+
+    return template;
+}
+
+// add selected item image to button
+function mySelect(country) {
+    var template,
+      cssClass = country.getAttribute('data-class');
+
+    template = cssClass ? '&lt;span class=&quot;color ' + cssClass + '&quot;&gt;&lt;/span&gt;' + country.textContent : country.textContent;
+
+    return template;
+}
+                </code>
+            </pre>                
+            <select class="countries" name="countries">
+                <option value="">Choose country</option>
+                <option data-class="au" value="australie">Australie</option>
+                <option data-class="cn" value="engeland">China</option>
+                <option data-class="at" value="austria" selected="selected">Austria</option>
+                <option data-class="jp" value="japan">Japan</option>
+                <option data-class="de" value="germany">Germany</option>
+            </select>
+   
+
+    </section> 
+
+        <script type="text/javascript" src="js/selecto.js"></script>
+        <script type="text/javascript">
+            var countries = new Selecto('.countries', {
+                width: 250,
+                height: '40',
+                renderFunction: myRender,
+                renderSelect: mySelect
+            });
+
+            function myRender(country) {
+                var template, cssClass;
+
+                cssClass = country.getAttribute('data-class');
+                template = cssClass ? '<span class="color ' + cssClass + '"></span>' + country.textContent : country.textContent;
+
+                return template;
+            }
+
+            function mySelect(country) {
+                var template,
+                  cssClass = country.getAttribute('data-class');
+
+                template = cssClass ? '<span class="color ' + cssClass + '"></span>' + country.textContent : country.textContent;
+
+                return template;
+            }
+
+            /**
+             * 
+             * testing purpose
+             */
+            var colors = new Selecto('#colors');
+
+
+            var music = new Selecto('#music',
+              {
+                  width: '500',
+                  height:60
+              });
+           
+        </script>
+<footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+      </footer>
+    </body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "westag-selecto",
+  "description": "A lightweight select box replacement written in pure javascript.",
+  "version": "1.0.0",
+  "main": "src/selecto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/westag/selecto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/my_package/issues"
+  },
+  "homepage": "https://github.com/westag/selecto.git#readme"
+}
