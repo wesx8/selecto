@@ -20,12 +20,14 @@ This lightweight plugin replaces original html select tag with Selecto dropdown.
 
 ## Install
 
-### NPM
+### npm
+```html
 npm install westag-selecto
+```
 
 ## Usage
 
-Download/clone the files
+Install via npm(see above) or Download/clone the files
 
 Link to JS file ex.:
 ```html
