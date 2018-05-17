@@ -20,6 +20,11 @@ This lightweight plugin replaces original html select tag with Selecto dropdown.
 
 ## Install
 
+### Bower
+```html
+npm install westag-selecto
+```
+
 ### npm
 ```html
 npm install westag-selecto
