@@ -18,6 +18,11 @@ This lightweight plugin replaces original html select tag with Selecto dropdown.
 
 [Link](https://westag.github.io/selecto/)
 
+## Install
+
+### NPM
+npm install westag-selecto
+
 ## Usage
 
 Download/clone the files
