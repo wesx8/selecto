@@ -10,7 +10,11 @@
     "type": "git",
     "url": "https://github.com/westag/selecto.git"
   },
-  "keywords": [],
+  "keywords": [
+      "selectbox",
+      "select",
+      "dropbox"
+   ],
   "author": "",
   "license": "ISC",
   "bugs": {
