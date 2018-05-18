@@ -67,8 +67,8 @@ var Selecto = (function () {
             // 
             width: false,
             height: false,
-            renderFunction: false,
-            renderSelect: false,
+            renderItem: false,
+            renderBtn: false,
             onChange: false
         }
         // if arguments extend defaults
@@ -187,8 +187,8 @@ var Selecto = (function () {
         }
         btnText = this.button.querySelector('.selecto-txt');
         //btnText.innerHTML = et;
-        if (this.options && typeof this.options.renderSelect === 'function') {
-            btnText.innerHTML = this.options.renderSelect(oSelected);
+        if (this.options && typeof this.options.renderBtn === 'function') {
+            btnText.innerHTML = this.options.renderBtn(oSelected);
         } else {
             btnText.innerHTML = oSelected.textContent;
         }
@@ -362,8 +362,8 @@ var Selecto = (function () {
         var li = document.createElement('li');
         
         // create custom 
-        if (this.options && typeof this.options.renderFunction === 'function') {
-            li.innerHTML = this.options.renderFunction(el);
+        if (this.options && typeof this.options.renderItem === 'function') {
+            li.innerHTML = this.options.renderItem(el);
         } else {
             li.textContent =el.text;
         }
